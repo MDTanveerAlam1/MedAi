@@ -5,4 +5,5 @@ plotly
 pillow
 scikit-learn
 lightgbm
+openai
 # Other libraries you may need

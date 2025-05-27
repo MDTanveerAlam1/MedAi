@@ -267,7 +267,7 @@ with st.sidebar:
         label_visibility="collapsed"
     )
     st.markdown('<p style="font-weight:500; margin:15px 0 5px">Quick Search</p>', unsafe_allow_html=True)
-    quick_search = st.text_input("", placeholder="Search conditions...", label_visibility="collapsed")
+    quick_search = st.text_input("", placeholder="Search conditions...", label_visibility="visible")
 
 # ====================== DATA COMBINING & AUTO-LEARNING ======================
 combined_data = pd.concat([data, st.session_state["user_learned_data"]], ignore_index=True).copy()

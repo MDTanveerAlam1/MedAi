@@ -61,7 +61,7 @@ else:
 st.markdown(f"""
     <style>
     .stApp {{
-        background-color: {bg_color};
+        background-color: {bg_gradient};
         color: {text_color};
     }}
     section[data-testid="stSidebar"] {{

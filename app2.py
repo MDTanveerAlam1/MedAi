@@ -276,11 +276,6 @@ def render_map(city=""):
     st.image("https://i.imgur.com/6zK6wQk.png", caption=f"Nearby pharmacies in {city or 'your area'} (Demo)")
 
 # ===================== DARK MODE =====================
-if "dark_mode" not in st.session_state:
-    st.session_state.dark_mode = False
-
-def toggle_dark_mode():
-    st.session_state.dark_mode = not st.session_state.dark_mode
 
 # ===================== SIDEBAR NAVIGATION =====================
 with st.sidebar:
@@ -290,8 +285,6 @@ with st.sidebar:
             <p style="opacity:0.7; font-size:14px">Smart Drug Recommender</p>
         </div>
     """, unsafe_allow_html=True)
-    st.button("🌙 Toggle Dark Mode", on_click=toggle_dark_mode)
-    st.markdown("### 🔍 Navigation", help="Select a page to explore MedGuide features")
     page = st.radio(
         "",
         ["🏠 Home", "🧪 Predict Review", "📊 Analytics", "📤 Upload Data", "💬 Chat with AI", "ℹ️ About", "💊 Pharmacy Tools"],

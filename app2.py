@@ -44,7 +44,7 @@ if st.session_state.dark_mode:
 else:
     bg_color = "#f7f9fc"
     sidebar_bg = "#f0f2f6"
-    text_color = "#000000"
+    text_color = "#ffffff"
     accent_color = "#228be6"
     input_bg = "#ffffff"
     border_color = "#cccccc"

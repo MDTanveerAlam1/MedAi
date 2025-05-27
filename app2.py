@@ -42,7 +42,7 @@ if st.session_state.dark_mode:
     input_bg = "#1e293b"
     border_color = "#38bdf8"
 else:
-    bg_color = "#ffffff"
+    bg_color = "#f7f9fc"
     sidebar_bg = "#f0f2f6"
     text_color = "#000000"
     accent_color = "#228be6"
@@ -53,7 +53,7 @@ else:
 st.markdown(f"""
     <style>
     .stApp {{
-        background-color: {bg_color};
+        background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
         color: {text_color};
     }}
     section[data-testid="stSidebar"] {{
@@ -76,6 +76,16 @@ st.markdown(f"""
         background-color: {input_bg};
         color: {text_color};
         border: 1px solid {border_color};
+    }}
+    div[data-baseweb="select"] input {{
+        color: {text_color} !important;
+    }}
+    div[data-baseweb="select"] .css-1jqq78o-placeholder {{
+        color: {text_color} !important;
+    }}
+    input[type="text"] {{
+        color: {text_color} !important;
+        background-color: {input_bg} !important;
     }}
     </style>
 """, unsafe_allow_html=True)
@@ -124,8 +134,6 @@ def load_user_data():
 
 if "user_learned_data" not in st.session_state:
     st.session_state["user_learned_data"] = load_user_data()
-
-
 
 
 # ===================== CUSTOM CSS FOR UI =====================

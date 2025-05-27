@@ -129,7 +129,7 @@ if "user_learned_data" not in st.session_state:
 
 
 # ===================== CUSTOM CSS FOR UI =====================
-'''st.markdown("""
+st.markdown("""
     <style>
     .stApp {background: linear-gradient(135deg, #0a192f 0%, #2a5298 100%);
         font-family: 'Inter', sans-serif;
@@ -161,48 +161,6 @@ if "user_learned_data" not in st.session_state:
     .badge-positive {background: rgba(144,238,144,0.2); color:#90ee90;}
     .badge-neutral {background: rgba(255,193,7,0.2); color:#ffc107;}
     .badge-negative {background: rgba(255,99,71,0.2); color:#ff6347;}
-    '''
-st.markdown(f"""
-    <style>
-    .stApp {{
-        background-color: {bg_color};
-        color: {text_color};
-    }}
-    section[data-testid="stSidebar"] {{
-        background-color: {sidebar_bg};
-    }}
-    section[data-testid="stSidebar"] * {{
-        color: {text_color} !important;
-    }}
-    section[data-testid="stSidebar"] a {{
-        color: {accent_color} !important;
-    }}
-    section[data-testid="stSidebar"] .stButton>button {{
-        background-color: {accent_color};
-        color: {'black' if st.session_state.dark_mode else 'white'};
-        font-weight: bold;
-        border-radius: 10px;
-        padding: 0.4rem 1rem;
-    }}
-    section[data-testid="stSidebar"] input {{
-        background-color: {input_bg};
-        color: {text_color};
-        border: 1px solid {border_color};
-    }}
-    input[type="text"], textarea {{
-        color: {text_color} !important;
-        background-color: {input_bg} !important;
-        border: 1px solid {border_color} !important;
-    }}
-    div[data-baseweb="select"] input {{
-        color: {text_color} !important;
-    }}
-    div[data-baseweb="select"] .css-1jqq78o-placeholder {{
-        color: {text_color} !important;
-    }}
-    .css-1cpxqw2 edgvbvh3 {{
-        color: {text_color} !important;
-    }}
     </style>
 """, unsafe_allow_html=True)
 

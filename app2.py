@@ -34,6 +34,7 @@ with st.sidebar:
         st.session_state.dark_mode = not st.session_state.dark_mode
 
 # ===================== COLOR THEME SETUP =====================
+# ===================== COLOR THEME SETUP =====================
 # Set Colors Based on Theme
 if st.session_state.dark_mode:
     # Night Mode (Dark Theme)
@@ -102,9 +103,11 @@ st.markdown(f"""
         border-radius: 10px;
         padding: 10px;
     }}
+    .stRadio > div > label, .stRadio > div > div > label {{
+        color: {text_color} !important;
+    }}
     </style>
 """, unsafe_allow_html=True)
-
 
 # ===================== DATA AND MODEL LOADING =====================
 @st.cache_data

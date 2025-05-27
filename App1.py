@@ -531,10 +531,11 @@ elif page == "ℹ️ About":
             <div style="background:rgba(255,255,255,0.05); padding:25px; border-radius:15px; text-align:center">
                 <h3>Meet the Team</h3>
                 <div style="width:100px; height:100px; border-radius:50%; background:linear-gradient(135deg,#00d4ff,#90ee90); margin:0 auto 15px; display:flex; align-items:center; justify-content:center;">
-                    <span style="font-size:48px; color:white; font-weight:bold;">SA</span>
+                    <span style="font-size:48px; color:white; font-weight:bold;">MD</span>
                 </div>
                 <h4>MD.Tanveer Alam</h4>
                 <p style="opacity:0.8">Lead Developer & Data Scientist</p>
+                <h5>"Kasturi Sai Ganaamruth","Jemiyah Lijo","Pankaj Singh","B. Mahalakshmi","Shaikh Akbar Ali"</h5>
             </div>
         """, unsafe_allow_html=True)
 

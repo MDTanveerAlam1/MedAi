@@ -533,7 +533,7 @@ elif page == "ℹ️ About":
                 <div style="width:100px; height:100px; border-radius:50%; background:linear-gradient(135deg,#00d4ff,#90ee90); margin:0 auto 15px; display:flex; align-items:center; justify-content:center;">
                     <span style="font-size:48px; color:white; font-weight:bold;">SA</span>
                 </div>
-                <h4>Shaikh Akbar Ali</h4>
+                <h4>MD.Tanveer Alam</h4>
                 <p style="opacity:0.8">Lead Developer & Data Scientist</p>
             </div>
         """, unsafe_allow_html=True)

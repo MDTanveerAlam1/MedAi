@@ -535,7 +535,11 @@ elif page == "ℹ️ About":
                 </div>
                 <h4>MD.Tanveer Alam</h4>
                 <p style="opacity:0.8">Lead Developer & Data Scientist</p>
-                <h5>"Kasturi Sai Ganaamruth","Jemiyah Lijo","Pankaj Singh","B. Mahalakshmi","Shaikh Akbar Ali"</h5>
+                <h5>Kasturi Sai Ganaamruth,
+                    Jemiyah Lijo,
+                    Pankaj Singh,
+                    B. Mahalakshmi,
+                    Shaikh Akbar Ali"</h5>
             </div>
         """, unsafe_allow_html=True)
 

@@ -35,6 +35,7 @@ with st.sidebar:
 
 # ===================== COLOR THEME SETUP =====================
 # ===================== COLOR THEME SETUP =====================
+# ===================== COLOR THEME SETUP =====================
 # Set Colors Based on Theme
 if st.session_state.dark_mode:
     # Night Mode (Dark Theme)
@@ -85,6 +86,12 @@ st.markdown(f"""
         background-color: {input_bg} !important;
         color: {text_color} !important;
     }}
+    .stFileUploader > div {{
+        background-color: {input_bg} !important;
+        border: 1px solid {border_color} !important;
+        border-radius: 8px !important;
+        color: {text_color} !important;
+    }}
     .stButton>button {{
         background-color: {accent_color};
         color: {'black' if st.session_state.dark_mode else 'white'} !important;
@@ -98,12 +105,23 @@ st.markdown(f"""
         border-radius: 10px;
         padding: 12px;
     }}
-    .stRadio > div {{
+    .stRadio > div,
+    .stSelectbox > div,
+    .stTimeInput > div,
+    .stTextInput > div,
+    .stFileUploader > div,
+    .stTextArea > div {{
         background-color: {section_bg} !important;
-        border-radius: 10px;
-        padding: 10px;
+        border-radius: 10px !important;
+        padding: 10px !important;
     }}
-    .stRadio > div > label, .stRadio > div > div > label {{
+    .stRadio > div > label,
+    .stRadio > div > div > label,
+    label[data-testid="stWidgetLabel"] > div,
+    .stSelectbox label,
+    .stTextInput label,
+    .stTimeInput label,
+    .stTextArea label {{
         color: {text_color} !important;
     }}
     </style>

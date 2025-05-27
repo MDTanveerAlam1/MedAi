@@ -614,7 +614,7 @@ elif page == "💊 Pharmacy Tools":
 # ===================== FOOTER =====================
 st.markdown("""
     <div style="text-align:center; padding:20px; margin-top:40px; border-top:1px solid rgba(255,255,255,0.1); font-size:14px; opacity:0.8">
-        MedGuide v2.2.0 | Made with 💙 by Shaikh Akbar Ali | © 2025
+        MedGuide v2.2.0 | Made with 💙 by MD.Tanveer Alam | © 2025
     </div>
 """, unsafe_allow_html=True)
 st.markdown('</div>', unsafe_allow_html=True)

@@ -34,20 +34,24 @@ with st.sidebar:
         st.session_state.dark_mode = not st.session_state.dark_mode
 
 # Set Colors Based on Theme
+# Set Colors Based on Theme
 if st.session_state.dark_mode:
-    bg_color = "#0a192f"
-    sidebar_bg = "#0a192f"
-    text_color = "#ffffff"
-    accent_color = "#00d084"
-    input_bg = "#1e293b"
-    border_color = "#38bdf8"
+    # Night Mode (Dark Theme)
+    bg_color = "#121212"         # Very dark background
+    sidebar_bg = "#1f1f1f"       # Slightly lighter sidebar
+    text_color = "#ffffff"       # White text
+    accent_color = "#64ffda"     # Neon cyan for accents
+    input_bg = "#2c2c2c"         # Input fields background
+    border_color = "#00bcd4"     # Cyan blue border
 else:
-    bg_color = "#f7f9fc"
-    sidebar_bg = "#f0f2f6"
-    text_color = "#ffffff"
-    accent_color = "#228be6"
-    input_bg = "#ffffff"
-    border_color = "#cccccc"
+    # Day Mode (Light Theme)
+    bg_color = "#ffffff"         # Pure white background
+    sidebar_bg = "#f0f2f5"       # Very light gray for sidebar
+    text_color = "#000000"       # Black text
+    accent_color = "#1e90ff"     # Dodger blue for accents
+    input_bg = "#f9f9f9"         # Very light input background
+    border_color = "#dcdcdc"     # Light gray border
+
 
 # Inject Dynamic CSS
 st.markdown(f"""

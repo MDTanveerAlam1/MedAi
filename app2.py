@@ -33,9 +33,11 @@ with st.sidebar:
     if toggle:
         st.session_state.dark_mode = not st.session_state.dark_mode
 
+# ===================== COLOR THEME SETUP =====================
+# Set Colors Based on Theme
 if st.session_state.dark_mode:
     # Night Mode (Dark Theme)
-    bg_color = "#121212"
+    bg_gradient = "linear-gradient(to right, #0f2027, #203a43, #2c5364)"
     sidebar_bg = "#1e1e1e"
     text_color = "#ffffff"
     accent_color = "#64ffda"
@@ -45,7 +47,7 @@ if st.session_state.dark_mode:
     section_bg = "#1f1f1f"
 else:
     # Day Mode (Light Theme)
-    bg_color = "#ffffff"
+    bg_gradient = "linear-gradient(to right, #ffffff, #e6f0ff, #cce0ff)"
     sidebar_bg = "#f8f9fa"
     text_color = "#212529"
     accent_color = "#1e90ff"
@@ -53,6 +55,7 @@ else:
     border_color = "#dee2e6"
     card_bg = "#ffffff"
     section_bg = "#f8f9fa"
+
 
 # ===================== DYNAMIC CSS INJECTION =====================
 st.markdown(f"""

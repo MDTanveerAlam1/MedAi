@@ -207,10 +207,6 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 
-    
-    </style>
-""", unsafe_allow_html=True)
-
 # ===================== HELPER FUNCTIONS =====================
 def display_rating(rating, max_rating=10):
     full_stars = int(rating / (max_rating/5))

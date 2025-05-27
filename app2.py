@@ -137,40 +137,6 @@ if "user_learned_data" not in st.session_state:
 
 
 # ===================== CUSTOM CSS FOR UI =====================
-st.markdown("""
-    <style>
-    .stApp {background: linear-gradient(135deg, #0a192f 0%, #2a5298 100%);
-        font-family: 'Inter', sans-serif;
-        color: #e6e6fa;}
-    h1 {background: linear-gradient(90deg, #00d4ff 0%, #90ee90 100%);
-        -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-        font-weight: 800; font-size: 2.8rem; margin-bottom: 1.5rem;}
-    h2, h3 {color: #00d4ff; font-weight: 600;}
-    .drug-card {background: rgba(255,255,255,0.1); backdrop-filter: blur(12px);
-        border-radius: 16px; padding: 20px; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.2);
-        box-shadow: 0 6px 24px rgba(0,0,0,0.15); transition: transform 0.3s, box-shadow 0.3s;}
-    .drug-card:hover {transform: translateY(-4px); box-shadow: 0 10px 32px rgba(0,212,255,0.3);}
-    .stTextInput > div > div > input, .stTextArea textarea, .stSelectbox > div > div {
-        background: rgba(255,255,255,0.05); color: #e6e6fa; border: 1px solid rgba(255,255,255,0.3);
-        border-radius: 12px; padding: 12px; font-size: 16px;}
-    .stTextInput > div > div > input:focus, .stTextArea textarea:focus, .stSelectbox > div > div:focus {
-        border-color: #00d4ff; box-shadow: 0 0 8px rgba(0,212,255,0.3);}
-    .stButton>button {background: linear-gradient(90deg, #00d4ff 0%, #90ee90 100%); color: #0a192f;
-        font-weight: 700; border-radius: 12px; padding: 12px 24px; border: none; text-transform: uppercase;
-        letter-spacing: 1px; transition: transform 0.2s, box-shadow 0.2s;}
-    .stButton>button:hover {transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,212,255,0.4);}
-    section[data-testid="stSidebar"] {background: rgba(10,25,47,0.95); backdrop-filter: blur(10px);
-        padding: 20px; width: 280px; border-right: 1px solid rgba(255,255,255,0.1);}
-    .review-container {max-height: 300px; overflow-y: auto; background: rgba(0,212,255,0.1);
-        padding: 15px; border-radius: 10px; margin: 10px 0;}
-    .review-box {background: rgba(144,238,144,0.15); border-left: 4px solid #90ee90; padding: 15px;
-        border-radius: 0 12px 12px 0; margin-bottom: 12px;}
-    .badge {padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-right: 8px;}
-    .badge-positive {background: rgba(144,238,144,0.2); color:#90ee90;}
-    .badge-neutral {background: rgba(255,193,7,0.2); color:#ffc107;}
-    .badge-negative {background: rgba(255,99,71,0.2); color:#ff6347;}
-    </style>
-""", unsafe_allow_html=True)
 
 
 # ===================== HELPER FUNCTIONS =====================

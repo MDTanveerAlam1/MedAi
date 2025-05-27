@@ -35,7 +35,6 @@ with st.sidebar:
 
 # ===================== COLOR THEME SETUP =====================
 # ===================== COLOR THEME SETUP =====================
-# ===================== COLOR THEME SETUP =====================
 # Set Colors Based on Theme
 if st.session_state.dark_mode:
     # Night Mode (Dark Theme)
@@ -110,10 +109,12 @@ st.markdown(f"""
     .stTimeInput > div,
     .stTextInput > div,
     .stFileUploader > div,
-    .stTextArea > div {{
+    .stTextArea > div,
+    div[data-baseweb="radio"] > div {{
         background-color: {section_bg} !important;
         border-radius: 10px !important;
         padding: 10px !important;
+        color: {text_color} !important;
     }}
     .stRadio > div > label,
     .stRadio > div > div > label,
@@ -121,11 +122,13 @@ st.markdown(f"""
     .stSelectbox label,
     .stTextInput label,
     .stTimeInput label,
-    .stTextArea label {{
+    .stTextArea label,
+    div[data-baseweb="radio"] label {{
         color: {text_color} !important;
     }}
     </style>
 """, unsafe_allow_html=True)
+
 
 # ===================== DATA AND MODEL LOADING =====================
 @st.cache_data

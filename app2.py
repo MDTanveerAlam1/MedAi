@@ -37,35 +37,34 @@ with st.sidebar:
 # Set Colors Based on Theme
 if st.session_state.dark_mode:
     # Night Mode (Dark Theme)
-    bg_gradient = "linear-gradient(to right, #0f2027, #203a43, #2c5364)"
-    sidebar_bg = "#1e1e1e"
+    bg_gradient = "linear-gradient(135deg, #0f2027, #203a43, #2c5364)"
+    sidebar_bg = "linear-gradient(to bottom, #1c1c1c, #2a2a2a)"
     text_color = "#ffffff"
-    accent_color = "#64ffda"
-    input_bg = "#1f1f1f"
+    accent_color = "linear-gradient(to right, #00c6ff, #0072ff)"
+    input_bg = "linear-gradient(to right, #1f1f1f, #2a2a2a)"
     border_color = "#555555"
-    card_bg = "#1e1e1e"
-    section_bg = "#1f1f1f"
+    card_bg = "linear-gradient(135deg, #1e1e1e, #2b2b2b)"
+    section_bg = "linear-gradient(to right, #1c1c1c, #2f2f2f)"
 else:
     # Day Mode (Light Theme)
     bg_gradient = "linear-gradient(to right, #ffffff, #e6f0ff, #cce0ff)"
-    sidebar_bg = "#f8f9fa"
+    sidebar_bg = "linear-gradient(to bottom, #ffffff, #f2f7ff)"
     text_color = "#212529"
-    accent_color = "#1e90ff"
-    input_bg = "#ffffff"
+    accent_color = "linear-gradient(to right, #4facfe, #00f2fe)"
+    input_bg = "linear-gradient(to right, #ffffff, #f7faff)"
     border_color = "#dee2e6"
-    card_bg = "#ffffff"
-    section_bg = "#f8f9fa"
-
+    card_bg = "linear-gradient(to right, #ffffff, #e6f0ff)"
+    section_bg = "linear-gradient(to right, #f0f4ff, #dceeff)"
 
 # ===================== DYNAMIC CSS INJECTION =====================
 st.markdown(f"""
     <style>
     .stApp {{
-        background-color: {bg_gradient};
-        color: {text_color};
+        background: {bg_gradient} !important;
+        color: {text_color} !important;
     }}
     section[data-testid="stSidebar"] {{
-        background-color: {sidebar_bg} !important;
+        background: {sidebar_bg} !important;
         color: {text_color} !important;
     }}
     section[data-testid="stSidebar"] * {{
@@ -75,32 +74,33 @@ st.markdown(f"""
     .stTextArea textarea,
     .stDateInput>div>div>input,
     .stTimeInput>div>div>input {{
-        background-color: {input_bg} !important;
+        background: {input_bg} !important;
         color: {text_color} !important;
         border: 1px solid {border_color} !important;
         border-radius: 8px !important;
     }}
     .stSelectbox>div>div>div>input,
     div[data-baseweb="select"] input {{
-        background-color: {input_bg} !important;
+        background: {input_bg} !important;
         color: {text_color} !important;
     }}
     .stFileUploader > div {{
-        background-color: {input_bg} !important;
+        background: {input_bg} !important;
         border: 1px solid {border_color} !important;
         border-radius: 8px !important;
         color: {text_color} !important;
     }}
     .stButton>button {{
-        background-color: {accent_color};
+        background: {accent_color} !important;
         color: {'black' if st.session_state.dark_mode else 'white'} !important;
         font-weight: bold;
         border-radius: 10px;
         padding: 0.4rem 1rem;
+        border: none;
     }}
     .drug-card, .review-box, .element-container, .stMarkdown, .stDataFrame {{
-        background-color: {card_bg};
-        color: {text_color};
+        background: {card_bg} !important;
+        color: {text_color} !important;
         border-radius: 10px;
         padding: 12px;
     }}
@@ -111,7 +111,7 @@ st.markdown(f"""
     .stFileUploader > div,
     .stTextArea > div,
     div[data-baseweb="radio"] > div {{
-        background-color: {section_bg} !important;
+        background: {section_bg} !important;
         border-radius: 10px !important;
         padding: 10px !important;
         color: {text_color} !important;
@@ -128,7 +128,6 @@ st.markdown(f"""
     }}
     </style>
 """, unsafe_allow_html=True)
-
 
 # ===================== DATA AND MODEL LOADING =====================
 @st.cache_data

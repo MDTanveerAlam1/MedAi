@@ -33,6 +33,7 @@ with st.sidebar:
     if toggle:
         st.session_state.dark_mode = not st.session_state.dark_mode
 
+# ===================== COLOR THEME SETUP =====================
 # Set Colors Based on Theme
 if st.session_state.dark_mode:
     # Night Mode (Dark Theme)
@@ -55,8 +56,7 @@ else:
     card_bg = "#ffffff"
     section_bg = "#f1f3f5"
 
-
-# Inject Dynamic CSS
+# ===================== DYNAMIC CSS INJECTION =====================
 st.markdown(f"""
     <style>
     .stApp {{
@@ -70,10 +70,19 @@ st.markdown(f"""
     section[data-testid="stSidebar"] * {{
         color: {text_color} !important;
     }}
-    .stTextInput>div>div>input, .stTextArea textarea {{
+    .stTextInput>div>div>input,
+    .stTextArea textarea,
+    .stDateInput>div>div>input,
+    .stTimeInput>div>div>input {{
         background-color: {input_bg} !important;
         color: {text_color} !important;
-        border: 1px solid {border_color};
+        border: 1px solid {border_color} !important;
+        border-radius: 8px !important;
+    }}
+    .stSelectbox>div>div>div>input,
+    div[data-baseweb="select"] input {{
+        background-color: {input_bg} !important;
+        color: {text_color} !important;
     }}
     .stButton>button {{
         background-color: {accent_color};
@@ -82,11 +91,11 @@ st.markdown(f"""
         border-radius: 10px;
         padding: 0.4rem 1rem;
     }}
-    .review-box, .drug-card, .stContainer, .stDataFrame, .element-container, .stMarkdown {{
+    .drug-card, .review-box, .element-container, .stMarkdown, .stDataFrame {{
         background-color: {card_bg};
         color: {text_color};
         border-radius: 10px;
-        padding: 10px;
+        padding: 12px;
     }}
     .stRadio > div {{
         background-color: {section_bg} !important;
@@ -95,6 +104,7 @@ st.markdown(f"""
     }}
     </style>
 """, unsafe_allow_html=True)
+
 
 # ===================== DATA AND MODEL LOADING =====================
 @st.cache_data

@@ -70,7 +70,9 @@ if "user_learned_data" not in st.session_state:
 # ===================== CUSTOM CSS FOR UI =====================
 st.markdown("""
     <style>
-    .stApp {background: linear-gradient(135deg, #0a192f 0%, #2a5298 100%); font-family: 'Inter', sans-serif; color: #e6e6fa;}
+    .stApp {background: linear-gradient(135deg, #0a192f 0%, #2a5298 100%);
+        font-family: 'Inter', sans-serif;
+        color: #e6e6fa;}
     .dark-mode .stApp {background: linear-gradient(135deg, ##769fa3 0%, #3b4a6b 100%);}
     h1 {background: linear-gradient(90deg, #00d4ff 0%, #90ee90 100%);
         -webkit-background-clip: text; -webkit-text-fill-color: transparent;

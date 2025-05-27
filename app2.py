@@ -34,62 +34,64 @@ with st.sidebar:
         st.session_state.dark_mode = not st.session_state.dark_mode
 
 # Set Colors Based on Theme
-# Set Colors Based on Theme
 if st.session_state.dark_mode:
     # Night Mode (Dark Theme)
-    bg_color = "#121212"         # Very dark background
-    sidebar_bg = "#1f1f1f"       # Slightly lighter sidebar
-    text_color = "#ffffff"       # White text
-    accent_color = "#64ffda"     # Neon cyan for accents
-    input_bg = "#2c2c2c"         # Input fields background
-    border_color = "#00bcd4"     # Cyan blue border
+    bg_color = "#121212"
+    sidebar_bg = "#1e1e1e"
+    text_color = "#ffffff"
+    accent_color = "#64ffda"
+    input_bg = "#1f1f1f"
+    border_color = "#555555"
+    card_bg = "#1e1e1e"
+    section_bg = "#2c2c2c"
 else:
     # Day Mode (Light Theme)
-    bg_color = "#ffffff"         # Pure white background
-    sidebar_bg = "#f0f2f5"       # Very light gray for sidebar
-    text_color = "#000000"       # Black text
-    accent_color = "#1e90ff"     # Dodger blue for accents
-    input_bg = "#f9f9f9"         # Very light input background
-    border_color = "#dcdcdc"     # Light gray border
+    bg_color = "#ffffff"
+    sidebar_bg = "#f8f9fa"
+    text_color = "#212529"
+    accent_color = "#1e90ff"
+    input_bg = "#ffffff"
+    border_color = "#dee2e6"
+    card_bg = "#ffffff"
+    section_bg = "#f1f3f5"
 
 
 # Inject Dynamic CSS
 st.markdown(f"""
     <style>
     .stApp {{
-        background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+        background-color: {bg_color};
         color: {text_color};
     }}
     section[data-testid="stSidebar"] {{
-        background-color: {sidebar_bg};
+        background-color: {sidebar_bg} !important;
+        color: {text_color} !important;
     }}
     section[data-testid="stSidebar"] * {{
         color: {text_color} !important;
     }}
-    section[data-testid="stSidebar"] a {{
-        color: {accent_color} !important;
+    .stTextInput>div>div>input, .stTextArea textarea {{
+        background-color: {input_bg} !important;
+        color: {text_color} !important;
+        border: 1px solid {border_color};
     }}
-    section[data-testid="stSidebar"] .stButton>button {{
+    .stButton>button {{
         background-color: {accent_color};
-        color: {'black' if st.session_state.dark_mode else 'white'};
+        color: {'black' if st.session_state.dark_mode else 'white'} !important;
         font-weight: bold;
         border-radius: 10px;
         padding: 0.4rem 1rem;
     }}
-    section[data-testid="stSidebar"] input {{
-        background-color: {input_bg};
+    .review-box, .drug-card, .stContainer, .stDataFrame, .element-container, .stMarkdown {{
+        background-color: {card_bg};
         color: {text_color};
-        border: 1px solid {border_color};
+        border-radius: 10px;
+        padding: 10px;
     }}
-    div[data-baseweb="select"] input {{
-        color: {text_color} !important;
-    }}
-    div[data-baseweb="select"] .css-1jqq78o-placeholder {{
-        color: {text_color} !important;
-    }}
-    input[type="text"] {{
-        color: {text_color} !important;
-        background-color: {input_bg} !important;
+    .stRadio > div {{
+        background-color: {section_bg} !important;
+        border-radius: 10px;
+        padding: 10px;
     }}
     </style>
 """, unsafe_allow_html=True)
